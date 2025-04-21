@@ -1,0 +1,131 @@
+:root {
+  --navy:     #002147;
+  --gold:     #C5A600;
+  --white:    #FFFFFF;
+  --darkgray: #333333;
+  --lightgray:#f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--lightgray);
+  color: var(--darkgray);
+  line-height: 1.6;
+}
+
+/* Container Utility */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--navy);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo img {
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 400px;
+  background: url('hero-placeholder.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 33, 71, 0.65);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* White Sections */
+.white-section {
+  background: var(--white);
+  padding: 3rem 0;
+}
+.white-section h2 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.white-section p {
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+/* Events List */
+.event-list {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #a38b00;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--gold);
+  color: var(--navy);
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 500;
+}
